@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+.ql-font .ql-picker-label[data-value='Ubuntu Mono']::before,
+.ql-font .ql-picker-item[data-value='Ubuntu Mono']::before {
+  font-family: 'Ubuntu Mono', monospace;
+}

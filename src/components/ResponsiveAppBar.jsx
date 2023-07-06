@@ -20,30 +20,30 @@ import '../App.css';
 
 // Quote Generator API request on "API Ninjas"
 
-const quotes = {
-  method: 'GET',
-  url: 'https://api.api-ninjas.com/v1/quotes?category=success',
-  headers: {
-    'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
+// const quotes = {
+//   method: 'GET',
+//   url: 'https://api.api-ninjas.com/v1/quotes?category=success',
+//   headers: {
+//     'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
 
-  }
-};
+//   }
+// };
 
-let finalQuote = [];
+// let finalQuote = [];
 
-try {
-	const response = await axios.request(quotes);
-	console.log(response.data);
-  finalQuote = response.data;
-} catch (error) {
-	console.error(error);
-}
+// try {
+// 	const response = await axios.request(quotes);
+// 	console.log(response.data);
+//   finalQuote = response.data;
+// } catch (error) {
+// 	console.error(error);
+// }
 
-// const testQuote = "Many a man owes his success to his first wife and his second wife to his success.";
+const testQuote = "Many a man owes his success to his first wife and his second wife to his success.";
 
 const myBlog = {
   name: "MY BLOGS",
-  url: "/myblogs"
+  url: "/allblogs"
 };
 
 const contact = {
@@ -196,16 +196,15 @@ function ResponsiveAppBar() {
 
       {/* ####### Quotes from API Ninjas ######## */}
 
-      <h1 className="quotes">"{finalQuote[0].quote}"</h1>
-      {/* <h1 className="quotes">"{testQuote}"</h1> */}
+      {/* <h1 className="quotes">"{finalQuote[0].quote}"</h1> */}
+      <h1 className="quotes">"{testQuote}"</h1>
 
       {/* ################ Blog Image ################### */}
       <div className="introImage">
-        <img className="abouttechiness" src={mainPageImage}
+        <img className="abouttechiness" src={mainPageImage} alt="mainBanner"
           style={{ width: '90%', height: 'auto', display: 'block' }}
         />
       </div>
-
     </div>
   );
 }

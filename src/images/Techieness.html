@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/writeblog -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" href="http://localhost:3000/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Techieness_files/css2" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Techieness</title>
+<script defer="" src="./Techieness_files/bundle.js"></script><style>.quotes {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Sacramento', cursive;
+    font-size: 3em;
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust font size for smaller screens */
+    .quotes {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjust font size for even smaller screens */
+    .quotes {
+        font-size: 14px;
+    }
+}
+
+.introImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.abouttechiness {
+    text-align: center;
+}
+
+.titleContent {
+    border: none;
+    overflow: hidden;
+    outline: none;
+
+    width: 35%;
+    height: auto;
+    box-shadow: none;
+
+    resize: none;
+    font-family: "medium-content-title-font", "Georgia", "Cambria", "Times New Roman", "Times", "serif";
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 42.5px;
+    text-rendering: optimizeLegibility;
+}
+
+.storyContent {
+    border: none;
+    overflow: hidden;
+    outline: none;
+
+    width: 35%;
+    height: auto;
+    box-shadow: none;
+
+    resize: none;
+    font-family: "medium-content-serif-font", "Georgia", "Cambria", "Times New Roman", "Times", "serif";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.072px;
+    line-height: 28.44px;
+    text-rendering: optimizeLegibility;
+}
+
+.content {
+    text-align: center;
+    margin-top: 100px;
+    font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,.84);
+    font-size: 20px;
+    line-height: 1.4;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLHdDQUF3QztJQUN4QyxrQ0FBa0M7SUFDbEMsY0FBYztBQUNsQjs7QUFFQTs7SUFFSSx5Q0FBeUM7SUFDekM7UUFDSSxlQUFlO0lBQ25CO0FBQ0o7O0FBRUE7O0lBRUksc0RBQXNEO0lBQ3REO1FBQ0ksZUFBZTtJQUNuQjtBQUNKOztBQUVBO0lBQ0ksYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixhQUFhOztJQUViLFVBQVU7SUFDVixZQUFZO0lBSVosZ0JBQWdCOztJQUVoQixZQUFZO0lBQ1osbUdBQW1HO0lBQ25HLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsc0JBQXNCO0lBQ3RCLG1CQUFtQjtJQUNuQixrQ0FBa0M7QUFDdEM7O0FBRUE7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGFBQWE7O0lBRWIsVUFBVTtJQUNWLFlBQVk7SUFJWixnQkFBZ0I7O0lBRWhCLFlBQVk7SUFDWixtR0FBbUc7SUFDbkcsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsd0JBQXdCO0lBQ3hCLG9CQUFvQjtJQUNwQixrQ0FBa0M7QUFDdEM7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLDhKQUE4SjtJQUM5SixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixrQ0FBa0M7SUFDbEMsbUNBQW1DO0lBQ25DLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsZ0JBQWdCO0FBQ3BCIiwic291cmNlc0NvbnRlbnQiOlsiLnF1b3RlcyB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtZmFtaWx5OiAnQXJjaGl2byBCbGFjaycsIHNhbnMtc2VyaWY7XG4gICAgZm9udC1mYW1pbHk6ICdTYWNyYW1lbnRvJywgY3Vyc2l2ZTtcbiAgICBmb250LXNpemU6IDNlbTtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7XG5cbiAgICAvKiBBZGp1c3QgZm9udCBzaXplIGZvciBzbWFsbGVyIHNjcmVlbnMgKi9cbiAgICAucXVvdGVzIHtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDQ4MHB4KSB7XG5cbiAgICAvKiBGdXJ0aGVyIGFkanVzdCBmb250IHNpemUgZm9yIGV2ZW4gc21hbGxlciBzY3JlZW5zICovXG4gICAgLnF1b3RlcyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICB9XG59XG5cbi5pbnRyb0ltYWdlIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgLyogaGVpZ2h0OiAxMDB2aDsgKi9cbn1cblxuLmFib3V0dGVjaGluZXNzIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi50aXRsZUNvbnRlbnQge1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIG91dGxpbmU6IG5vbmU7XG5cbiAgICB3aWR0aDogMzUlO1xuICAgIGhlaWdodDogYXV0bztcblxuICAgIC13ZWJraXQtYm94LXNoYWRvdzogbm9uZTtcbiAgICAtbW96LWJveC1zaGFkb3c6IG5vbmU7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcblxuICAgIHJlc2l6ZTogbm9uZTtcbiAgICBmb250LWZhbWlseTogXCJtZWRpdW0tY29udGVudC10aXRsZS1mb250XCIsIFwiR2VvcmdpYVwiLCBcIkNhbWJyaWFcIiwgXCJUaW1lcyBOZXcgUm9tYW5cIiwgXCJUaW1lc1wiLCBcInNlcmlmXCI7XG4gICAgZm9udC1zaXplOiAzNHB4O1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgbGV0dGVyLXNwYWNpbmc6IG5vcm1hbDtcbiAgICBsaW5lLWhlaWdodDogNDIuNXB4O1xuICAgIHRleHQtcmVuZGVyaW5nOiBvcHRpbWl6ZUxlZ2liaWxpdHk7XG59XG5cbi5zdG9yeUNvbnRlbnQge1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIG91dGxpbmU6IG5vbmU7XG5cbiAgICB3aWR0aDogMzUlO1xuICAgIGhlaWdodDogYXV0bztcblxuICAgIC13ZWJraXQtYm94LXNoYWRvdzogbm9uZTtcbiAgICAtbW96LWJveC1zaGFkb3c6IG5vbmU7XG4gICAgYm94LXNoYWRvdzogbm9uZTtcblxuICAgIHJlc2l6ZTogbm9uZTtcbiAgICBmb250LWZhbWlseTogXCJtZWRpdW0tY29udGVudC1zZXJpZi1mb250XCIsIFwiR2VvcmdpYVwiLCBcIkNhbWJyaWFcIiwgXCJUaW1lcyBOZXcgUm9tYW5cIiwgXCJUaW1lc1wiLCBcInNlcmlmXCI7XG4gICAgZm9udC1zaXplOiAxOHB4O1xuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgICBmb250LXdlaWdodDogNDAwO1xuICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNzJweDtcbiAgICBsaW5lLWhlaWdodDogMjguNDRweDtcbiAgICB0ZXh0LXJlbmRlcmluZzogb3B0aW1pemVMZWdpYmlsaXR5O1xufVxuXG4uY29udGVudCB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDEwMHB4O1xuICAgIGZvbnQtZmFtaWx5OiBtZWRpdW0tY29udGVudC1zYW5zLXNlcmlmLWZvbnQsLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsXCJTZWdvZSBVSVwiLFJvYm90byxPeHlnZW4sVWJ1bnR1LENhbnRhcmVsbCxcIk9wZW4gU2Fuc1wiLFwiSGVsdmV0aWNhIE5ldWVcIixzYW5zLXNlcmlmO1xuICAgIGxldHRlci1zcGFjaW5nOiAwO1xuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XG4gICAgZm9udC1zdHlsZTogbm9ybWFsO1xuICAgIHRleHQtcmVuZGVyaW5nOiBvcHRpbWl6ZUxlZ2liaWxpdHk7XG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gICAgY29sb3I6IHJnYmEoMCwwLDAsLjg0KTtcbiAgICBmb250LXNpemU6IDIwcHg7XG4gICAgbGluZS1oZWlnaHQ6IDEuNDtcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div><div><div class="content"><label for="title"></label><input class="titleContent" id="title" name="title" placeholder="Title" value=""><hr style="width: 35%;"><label for="story"></label><textarea class="storyContent" id="story" name="story" placeholder="Tell your story..." style="height: 146px;">
+
+
+
+</textarea></div><div><input type="file" name="image" disabled=""></div></div></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+</body></html>
