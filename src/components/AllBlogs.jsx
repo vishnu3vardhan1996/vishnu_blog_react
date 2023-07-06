@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { apiURL, reactURL } from "./App";
+import { MenuBar } from './MenuBar';
 import "../App.css";
 
 function AllBlogs() {
@@ -23,35 +24,38 @@ function AllBlogs() {
 
     return (
         <div>
+
+            <MenuBar />
+
             {allBlogs.allblogFromDB.map(function (blogs, index) {
                 return (
                     <div key={index} className="all-blogs">
 
                         {/* <div className="blog-box"> */}
 
-                            <a className="anchor-tag" href={`${reactURL}/blogs/${blogs.Filename}`}>
+                        <a className="anchor-tag" href={`${reactURL}/blogs/${blogs.Filename}`}>
 
-                                <p>{blogs.Postdate}</p>
-
-                                <div className="content-wrapper">
-
-                                    <h2>{blogs.Heading}</h2>
-
-                                    <p className="p-change" dangerouslySetInnerHTML={{ __html: blogs.Paragraph.slice(0, 220) + "..."  }}></p>
-
-                                </div>
-
-                            </a>
+                            <p>{blogs.Postdate}</p>
 
                             <div className="content-wrapper">
 
-                                <a className="anchor-tag" href={`${reactURL}/blogs/${blogs.Filename}`}>
+                                <h2>{blogs.Heading}</h2>
 
-                                    <img className="img-change" src={blogs.Image}></img>
-
-                                </a>
+                                <p className="p-change" dangerouslySetInnerHTML={{ __html: blogs.Paragraph.slice(0, 220) + "..." }}></p>
 
                             </div>
+
+                        </a>
+
+                        <div className="content-wrapper">
+
+                            <a className="anchor-tag" href={`${reactURL}/blogs/${blogs.Filename}`}>
+
+                                <img className="img-change" src={blogs.Image}></img>
+
+                            </a>
+
+                        </div>
 
                         {/* </div> */}
 
