@@ -4,6 +4,7 @@ import App from "./App";
 import { apiURL } from './App';
 import '../App.css';
 import ReactQuill from 'react-quill';
+import { MenuBar } from './MenuBar';
 import 'react-quill/dist/quill.snow.css';
 
 const modules = {
@@ -117,6 +118,9 @@ function WriteBlog() {
 
     return (
         <div>
+
+            <MenuBar />
+
             <div className='content'>
                 <ReactQuill
                     theme="snow"
