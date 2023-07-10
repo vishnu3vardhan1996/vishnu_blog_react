@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { apiURL, reactURL } from "./App";
 import { MenuBar } from './MenuBar';
+import { Footer } from './Footer';
 import "../App.css";
 
 function AllBlogs() {
@@ -20,12 +21,14 @@ function AllBlogs() {
             .catch(error => console.log(error));
     }, []);
 
-    console.log(allBlogs);
+    // console.log(allBlogs);
 
     return (
         <div>
+            <div>
+                <MenuBar />
+            </div>
 
-            <MenuBar />
 
             {allBlogs.allblogFromDB.map(function (blogs, index) {
                 return (
@@ -62,6 +65,10 @@ function AllBlogs() {
                     </div>
                 )
             })}
+            <div>
+                <Footer />
+            </div>
+
         </div>
     )
 }

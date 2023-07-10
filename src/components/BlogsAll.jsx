@@ -4,6 +4,7 @@ import { apiURL, reactURL } from "./App";
 import "../App.css";
 import ReactQuill from 'react-quill';
 import { MenuBar } from './MenuBar';
+import { Footer } from "./Footer";
 import 'react-quill/dist/quill.bubble.css';
 
 function BlogsAll() {
@@ -41,6 +42,7 @@ function BlogsAll() {
                 />
 
             </div>
+            <Footer />
         </div>
     )
 }

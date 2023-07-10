@@ -17,6 +17,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import mainPageImage from "../images/Untitled (1).png";
 import axios from 'axios';
 import '../App.css';
+import { Footer } from "./Footer";
 
 // Quote Generator API request on "API Ninjas"
 
@@ -205,6 +206,7 @@ function ResponsiveAppBar() {
           style={{ width: '90%', height: 'auto', display: 'block' }}
         />
       </div>
+      <Footer />
     </div>
   );
 }
