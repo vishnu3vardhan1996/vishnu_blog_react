@@ -118,7 +118,7 @@ function ResponsiveAppBar() {
                   textDecoration: 'none',
                 }}
               >
-                TECHIENESS
+                Fit-Tech
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -176,7 +176,7 @@ function ResponsiveAppBar() {
                   textDecoration: 'none',
                 }}
               >
-                TECHIENESS
+                Fit-Tech
               </Typography>
               <Box sx={{ mr: 6, flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                 {pages.map((page) => (
