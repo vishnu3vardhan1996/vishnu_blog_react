@@ -93,7 +93,7 @@ function MenuBar() {
                   textDecoration: 'none',
                 }}
               >
-                TECHIENESS
+                Fit-Tech
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
