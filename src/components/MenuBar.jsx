@@ -151,7 +151,7 @@ function MenuBar() {
                   textDecoration: 'none',
                 }}
               >
-                TECHIENESS
+                Fit-Tech
               </Typography>
               <Box sx={{ mr: 6, flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                 {pages.map((page) => (
