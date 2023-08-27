@@ -151,3 +151,26 @@
     text-decoration: none;
     color: inherit;
 }
+
+.contactfont { 
+    max-width: 560px;
+    max-width: 65ch;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.contactfonttitle {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'ADLaM Display';
+    font-size: 25px;
+}
+
+.cotactdetails {
+    max-width: 560px;
+    max-width: 50ch;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Noto Sans Adlam', sans-serif;
+}

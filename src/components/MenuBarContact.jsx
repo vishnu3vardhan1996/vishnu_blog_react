@@ -14,47 +14,17 @@ import MenuItem from '@mui/material/MenuItem';
 import BookTwoToneIcon from '@mui/icons-material/BookTwoTone';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 // ###### Typical Imports related for Project ########
-import mainPageImage from "../images/Untitled (1).png";
 import axios from 'axios';
 import '../App.css';
-import { Footer } from "./Footer";
-
-// Quote Generator API request on "API Ninjas"
-
-const quotes = {
-  method: 'GET',
-  url: 'https://api.api-ninjas.com/v1/quotes?category=success',
-  headers: {
-    'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
-
-  }
-};
-
-let finalQuote = [];
-
-try {
-	const response = await axios.request(quotes);
-	console.log(response.data);
-  finalQuote = response.data;
-} catch (error) {
-	console.error(error);
-}
-
-const testQuote = "Many a man owes his success to his first wife and his second wife to his success.";
 
 const myBlog = {
   name: "MY BLOGS",
   url: "/allblogs"
 };
 
-const contact = {
-  name: "CONTACT",
-  url: "/contact"
-};
+const pages = [myBlog];
 
-const pages = [myBlog, contact];
-
-function ResponsiveAppBar() {
+function MenuBarContact() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -195,19 +165,7 @@ function ResponsiveAppBar() {
         </AppBar>
       </ThemeProvider>
 
-      {/* ####### Quotes from API Ninjas ######## */}
-
-      <h1 className="quotes">"{finalQuote[0].quote}"</h1>
-      {/* <h1 className="quotes">"{testQuote}"</h1> */}
-
-      {/* ################ Blog Image ################### */}
-      <div className="introImage">
-        <img className="abouttechiness" src={mainPageImage} alt="mainBanner"
-          style={{ width: '90%', height: 'auto', display: 'block' }}
-        />
-      </div>
-      <Footer />
     </div>
   );
 }
-export { ResponsiveAppBar };
+export { MenuBarContact };

@@ -5,6 +5,7 @@ import { ReactNodeConnect } from "./ReactNodeConnect";
 import { BlogsAll } from "./BlogsAll";
 import { WriteBlog } from "./WriteBlog";
 import { AllBlogs } from "./AllBlogs";
+import { ContactPage } from "./ContactPage";
 // import { HomePage } from "./HomePage"; 
 import { ResponsiveAppBar } from "./ResponsiveAppBar";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path={`${process.env.REACT_APP_ALLBLOGS}`} element={<AllBlogs />} />
           <Route path={`${process.env.REACT_APP_BLOG}`} element={<BlogsAll />} />
           <Route path={`${process.env.REACT_APP_WRITEBLOG}`} element={<WriteBlog />} />
+          <Route path={`${process.env.REACT_APP_CONTACTPAGE}`} element={<ContactPage />} />
         </Routes>
       </Router>
       {/* <Reactnodeconnect /> */}
