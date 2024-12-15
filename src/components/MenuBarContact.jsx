@@ -12,6 +12,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import BookTwoToneIcon from '@mui/icons-material/BookTwoTone';
+import mainPageIcon from "../images/Chase__logo.svg";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 // ###### Typical Imports related for Project ########
 import axios from 'axios';
@@ -68,10 +69,16 @@ function MenuBarContact() {
       <ThemeProvider theme={theme}>
         <AppBar
           position="static"
+          
           color="primary">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              <BookTwoToneIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50 }} />
+              {/* <BookTwoToneIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50 }} /> */}
+
+              <a href="/">
+              <img src={mainPageIcon} alt="main_page_icon"  />
+              </a>
+
               <Typography
                 variant="h6"
                 noWrap
@@ -88,7 +95,6 @@ function MenuBarContact() {
                   textDecoration: 'none',
                 }}
               >
-                Fit-Tech
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

@@ -1,0 +1,17 @@
+.text-primary {
+    font-family: 'PPNeueMachina-InktrapLight', sans-serif;
+    color: white; 
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+.text-secondary {
+    font-family: 'PPNeueMachina-InktrapLight', sans-serif;
+    color: white;
+}
+
+.text-bold {
+    font-family: 'PPNeueMachina-InktrapLight', sans-serif;
+    font-weight: bold;
+    color: white;
+}

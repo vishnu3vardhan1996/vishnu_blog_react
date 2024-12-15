@@ -14,31 +14,33 @@ import MenuItem from '@mui/material/MenuItem';
 import BookTwoToneIcon from '@mui/icons-material/BookTwoTone';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 // ###### Typical Imports related for Project ########
-import mainPageImage from "../images/Untitled (1).png";
+import mainPageImage from "../images/Join_now.svg";
+import mainPageIcon from "../images/Chase__logo.svg";
+import {ContentPage} from "./ContentPage";
 import axios from 'axios';
 import '../App.css';
 import { Footer } from "./Footer";
 
 // Quote Generator API request on "API Ninjas"
 
-const quotes = {
-  method: 'GET',
-  url: 'https://api.api-ninjas.com/v1/quotes?category=success',
-  headers: {
-    'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
+// const quotes = {
+//   method: 'GET',
+//   url: 'https://api.api-ninjas.com/v1/quotes?category=success',
+//   headers: {
+//     'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
 
-  }
-};
+//   }
+// };
 
-let finalQuote = [];
+// let finalQuote = [];
 
-try {
-	const response = await axios.request(quotes);
-	console.log(response.data);
-  finalQuote = response.data;
-} catch (error) {
-	console.error(error);
-}
+// try {
+// 	const response = await axios.request(quotes);
+// 	console.log(response.data);
+//   finalQuote = response.data;
+// } catch (error) {
+// 	console.error(error);
+// }
 
 const testQuote = "Many a man owes his success to his first wife and his second wife to his success.";
 
@@ -71,7 +73,8 @@ function ResponsiveAppBar() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#595959',
+        // main: '#595959',
+        main: '#000000',
       },
 
       secondary: {
@@ -95,13 +98,18 @@ function ResponsiveAppBar() {
 
   return (
     <div className="container">
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} style={{ position: 'relative' }}>
         <AppBar
           position="static"
           color="primary">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              <BookTwoToneIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50 }} />
+              {/* <BookTwoToneIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50 }} /> */}
+              
+              <a href="/">
+              <img src={mainPageIcon} alt="main_page_icon"  />
+              </a>
+
               <Typography
                 variant="h6"
                 noWrap
@@ -118,7 +126,7 @@ function ResponsiveAppBar() {
                   textDecoration: 'none',
                 }}
               >
-                Fit-Tech
+                
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -159,7 +167,7 @@ function ResponsiveAppBar() {
                   ))}
                 </Menu>
               </Box>
-              <BookTwoToneIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+              {/* <BookTwoToneIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
               <Typography
                 variant="h5"
                 noWrap
@@ -176,7 +184,6 @@ function ResponsiveAppBar() {
                   textDecoration: 'none',
                 }}
               >
-                Fit-Tech
               </Typography>
               <Box sx={{ mr: 6, flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                 {pages.map((page) => (
@@ -197,15 +204,18 @@ function ResponsiveAppBar() {
 
       {/* ####### Quotes from API Ninjas ######## */}
 
-      <h1 className="quotes">"{finalQuote[0].quote}"</h1>
+      {/* <h1 className="quotes">"{finalQuote[0].quote}"</h1> */}
       {/* <h1 className="quotes">"{testQuote}"</h1> */}
 
       {/* ################ Blog Image ################### */}
-      <div className="introImage">
+      {/* <div className="introImage">
         <img className="abouttechiness" src={mainPageImage} alt="mainBanner"
-          style={{ width: '90%', height: 'auto', display: 'block' }}
+          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
-      </div>
+      </div> */}
+
+      <ContentPage />
+
       <Footer />
     </div>
   );

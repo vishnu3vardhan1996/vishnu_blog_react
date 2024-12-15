@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../App.css';
+import '../fonts.css';
+import '../styles.css';
 import { ReactNodeConnect } from "./ReactNodeConnect";
 import { BlogsAll } from "./BlogsAll";
 import { WriteBlog } from "./WriteBlog";
@@ -9,10 +11,10 @@ import { ContactPage } from "./ContactPage";
 // import { HomePage } from "./HomePage"; 
 import { ResponsiveAppBar } from "./ResponsiveAppBar";
 
-const apiURL = "https://vishnu-blog-be.onrender.com";
-const reactURL = "https://vishnu-blog-fe.onrender.com";
-// const apiURL = "http://localhost:3001";
-// const reactURL = "http://localhost:3000";
+// const apiURL = "https://vishnu-blog-be.onrender.com";
+// const reactURL = "https://vishnu-blog-fe.onrender.com";
+const apiURL = "http://localhost:3001";
+const reactURL = "http://localhost:3000";
 
 function App() {
   return (
