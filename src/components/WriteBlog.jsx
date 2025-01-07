@@ -90,7 +90,7 @@ function WriteBlog() {
             image = "";
         }
         else {
-            image = document.querySelector('img').getAttribute('src');
+            image = document.querySelectorAll('img')[1].getAttribute('src');
         }
 
         console.log(headingDoc);
