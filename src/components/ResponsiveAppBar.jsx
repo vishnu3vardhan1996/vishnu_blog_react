@@ -25,7 +25,7 @@ const quotes = {
   method: 'GET',
   url: 'https://api.api-ninjas.com/v1/quotes?category=success',
   headers: {
-    'X-Api-Key' : 'cxDiJvehmq+5cnMeBt/2+g==djLVlmdhJgxSlNDU'
+    'X-Api-Key' : 'iRTmYYBtv5vfV0pFyQ6UqlBhN7UJk9MVMlnjFm2l'
 
   }
 };
