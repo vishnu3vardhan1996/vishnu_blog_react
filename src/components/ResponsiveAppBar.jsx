@@ -23,10 +23,9 @@ import { Footer } from "./Footer";
 
 const quotes = {
   method: 'GET',
-  url: 'https://api.api-ninjas.com/v1/quotes?category=success',
+  url: 'https://api.api-ninjas.com/v1/quotes',
   headers: {
     'X-Api-Key' : 'iRTmYYBtv5vfV0pFyQ6UqlBhN7UJk9MVMlnjFm2l'
-
   }
 };
 
