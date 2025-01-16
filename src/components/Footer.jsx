@@ -49,7 +49,7 @@ function Footer() {
                     </a>
                 </footer>
             </div>
-            <footer style={{ textAlign: 'center', backgroundColor: "#595959", padding: "5px", color: "white", fontFamily: "Roboto, sans-serif" }}>©️ 2025 Techieness. Made with ❤️ by Vishnu</footer>
+            <footer style={{ textAlign: 'center', backgroundColor: "#595959", padding: "5px", color: "white", fontFamily: "Roboto, sans-serif" }}>©️ 2024 Techieness. Made with ❤️ by Vishnu</footer>
         </div>
     )
 }
