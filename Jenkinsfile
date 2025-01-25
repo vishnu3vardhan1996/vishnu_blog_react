@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         REGISTRY = "vishnu3vardhan1996/frontend"
-        TAG = "1.0.1"
+        TAG = "1.0.2"
         DOCKER_USERNAME = credentials('docker-login-username')
         DOCKER_PASSWORD = credentials('docker-login-password')
         CHECK_DOCKER_IMAGE = "docker images -a ${REGISTRY}:${TAG}"
