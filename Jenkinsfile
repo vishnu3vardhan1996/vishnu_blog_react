@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         REGISTRY = "vishnu3vardhan1996/frontend"
-        TAG = "1.0.2"
+        TAG = "latest"
         DOCKER_USERNAME = credentials('docker-login-username')
         DOCKER_PASSWORD = credentials('docker-login-password')
         CHECK_DOCKER_IMAGE = "docker images -a ${REGISTRY}:${TAG}"
@@ -27,9 +27,9 @@ pipeline {
                 sh '''
                     docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
                     if docker manifest inspect ${REGISTRY}:${TAG}; then
-                        docker pull ${REGISTRY}:${TAG};
+                        echo "Image exists in the registry";
                     else
-                        echo "Already exists";
+                        echo "Image does not exist in the registry";
                     fi
                 '''
             }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 sh '''
                     set -o pipefail
-                    
+
                     if helm list | grep -w vishnu-blog-fe; then
                         helm upgrade vishnu-blog-fe ./helm_charts/react;
                     else
