@@ -36,13 +36,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    // helm list | grep vishnu-blog-fe;
-                    // sleep 5;
-                    // if [ $? -ne 0 ]; then
-                        helm install vishnu-blog-fe ./helm_charts/react;
-                    // else
-                    //     helm upgrade vishnu-blog-fe ./helm_charts/react;
-                    // fi
+                    helm install vishnu-blog-fe ./helm_charts/react;
                 '''
             }
         }
