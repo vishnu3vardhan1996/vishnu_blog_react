@@ -40,7 +40,7 @@ pipeline {
                     if [ $? -ne 0 ]; then
                         helm install vishnu-blog-fe ./helm_charts/react;
                     else
-                        helm upgrade vishnu-blog-fe-new ./helm_charts/react;
+                        helm upgrade vishnu-blog-fe ./helm_charts/react;
                     fi
                 '''
             }
