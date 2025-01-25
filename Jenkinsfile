@@ -26,9 +26,10 @@ pipeline {
             steps {
                 sh '''
                     docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-                    docker manifest inspect ${REGISTRY}:${TAG}
-                    if [ $? -ne 0 ]; then
+                    if docker manifest inspect ${REGISTRY}:${TAG}; then
                         docker pull ${REGISTRY}:${TAG};
+                    else
+                        echo "Already exists";
                     fi
                 '''
             }
@@ -36,7 +37,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    helm install vishnu-blog-fe ./helm_charts/react;
+                    set -o pipefail
+                    
+                    if helm list | grep -w vishnu-blog-fe; then
+                        helm upgrade vishnu-blog-fe ./helm_charts/react;
+                    else
+                        helm install vishnu-blog-fe ./helm_charts/react;
+                    fi
+                    
                 '''
             }
         }
