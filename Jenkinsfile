@@ -10,6 +10,8 @@ pipeline {
         DOCKER_USERNAME = credentials('docker-login-username')
         DOCKER_PASSWORD = credentials('docker-login-password')
         CHECK_DOCKER_IMAGE = "docker images -a ${REGISTRY}:${TAG}"
+        RELEASE_NAME = "vishnu-blog-fe"
+        CHART_NAME = "react"
     }
 
     stages {
@@ -39,10 +41,10 @@ pipeline {
                 sh '''
                     set -o pipefail
 
-                    if helm list | grep -w vishnu-blog-fe; then
-                        helm upgrade vishnu-blog-fe ./helm_charts/react;
+                    if helm list | grep -w ${RELEASE_NAME}; then
+                        helm upgrade ${RELEASE_NAME} ./helm_charts/${CHART_NAME};
                     else
-                        helm install vishnu-blog-fe ./helm_charts/react;
+                        helm install ${RELEASE_NAME} ./helm_charts/${CHART_NAME};
                     fi
                     
                 '''
