@@ -48,8 +48,11 @@ podAnnotations: {}
 podLabels:
   app: front-end
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  runAsUser: 1000
+  runAsGroup: 3000
+  fsGroup: 2000
+  supplementalGroups: [4000]
 
 securityContext: {}
   # capabilities:
@@ -98,10 +101,12 @@ resources: {}
 
 # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 livenessProbe:
+  enabled: false
   httpGet:
     path: /
     port: http
 readinessProbe:
+  enabled: false
   httpGet:
     path: /
     port: http
