@@ -46,14 +46,14 @@ spec:
           envFrom:
           - secretRef:
               name: vishnu-blog-fe-secret
-          {{-if .Values.livenessProbe.enabled }}
+          {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
-          {{-end }}
-          {{-if .Values.readinessProbe.enabled }}
+          {{- end }}
+          {{- if .Values.readinessProbe.enabled }}
           readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
-          {{-end }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
