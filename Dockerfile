@@ -69,5 +69,7 @@ COPY ./src /usr/src/app/src/.
 # Expose the port that the application listens on.
 EXPOSE 3000
 
+ENTRYPOINT ["npm"]
+
 # Run the application.
-CMD npm start
+CMD ["start"]
